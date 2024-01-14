@@ -1,0 +1,918 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Background Video with Navbar</title>
+    <link rel="stylesheet" href="style.css" />
+    <link href="https://fonts.cdnfonts.com/css/butler" rel="stylesheet">
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Manrope&display=swap"
+      rel="stylesheet"
+    />
+    <script src="script.js"></script>
+    <script
+      src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+      integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://kit.fontawesome.com/60bdd6c8a9.js" crossorigin="anonymous"></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js"
+      integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js"
+      integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="stylesheet" type="text/css" href="slick/slick.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick-theme.min.css"
+      integrity="sha512-17EgCFERpgZKcm0j0fEq1YCJuyAWdz9KUtv1EjVuaOz8pDnh/0nZxmU6BBXwaaxqoi9PQXnRWqlcDB027hgv9A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    
+    <!-- Add the slick-theme.css if you want default styling -->
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"
+    />
+    <!-- Add the slick-theme.css if you want default styling -->
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick-theme.min.css"
+      integrity="sha512-17EgCFERpgZKcm0j0fEq1YCJuyAWdz9KUtv1EjVuaOz8pDnh/0nZxmU6BBXwaaxqoi9PQXnRWqlcDB027hgv9A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <script src="./script.js"></script>
+  </head>
+  <script
+    type="text/javascript"
+    src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"
+  ></script>
+  <body>
+     <!-- header -->
+     <header>
+        <div class="navbar-header">
+        <img src="./Assests/srm-logo-white.svg (1).svg" alt="Logo" class="logo"> <!-- Replace with your logo image -->
+        <nav >
+            <a href="#" class="nav-link1">Academics <i class="fa-solid fa-chevron-down"></i></a>
+            <a href="#" class="nav-link1">Research<i class="fa-solid fa-chevron-down"></i></a>
+            <a href="#" class="nav-link1">Campus Life<i class="fa-solid fa-chevron-down"></i></a>
+            <a href="#" class="nav-link1">International<i class="fa-solid fa-chevron-down"></i></a>
+            <a href="#" class="nav-link1">About<i class="fa-solid fa-chevron-down"></i></a>
+        </nav>
+    </div>
+    
+    
+    <div class="modal-overlay" id="academics-modal">
+        <!-- Modal content for Academics -->
+        <div class="modal-content">
+            <h2>Academics Modal</h2>
+            <!-- Add your modal content here -->
+            <p>This is the content of the Academics modal.</p>
+        </div>
+    </div>
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+    const navLinks = document.querySelectorAll('.nav-link');
+
+    navLinks.forEach(link => {
+        const modalId = link.getAttribute('data-modal');
+        const modal = document.getElementById(modalId);
+
+        link.addEventListener('mouseenter', function() {
+            modal.style.display = 'block';
+        });
+
+        link.addEventListener('mouseleave', function() {
+            modal.style.display = 'none';
+        });
+
+        modal.addEventListener('mouseenter', function() {
+            modal.style.display = 'block';
+        });
+
+        modal.addEventListener('mouseleave', function() {
+            modal.style.display = 'none';
+        });
+    });
+});
+
+
+    </script>
+    <div class="crousel-header-part">
+    <div class="crousel-header">
+        <div class="content-1">
+            <h1>SRMJEEM 2024</h1>
+            <p>Applications are open now for MBA</p>
+            <button class="content-btn">Apply now   <i class="fa-solid fa-arrow-right"></i> 
+
+            </button>
+        </div>
+        <div class="content-1">
+            <h1>SRMJEEM 2024</h1>
+            <p>Applications are open now for Btech and Mtech programme</p>
+            <button class="content-btn">Apply now  <i class="fa-solid fa-arrow-right"></i> 
+
+            </button>
+        </div>
+        <div class="content-1">
+            <h1>Learn. Leap. Lead</h1>
+            <p>A place of learning,innovation,Discovery and Discourse</p>
+            <button class="content-btn">Apply now  <i class="fa-solid fa-arrow-right"></i> 
+
+            </button>
+        </div>
+       
+    </div>
+</div>
+    <script>
+        $(document).ready(function(){
+  $('.crousel-header').slick({
+    infinite: true,
+  slidesToShow: 1,
+  slidesToScroll: 1,
+   autoplay:true,
+      autoplaySpeed:2000,
+      arrows:true,
+  dots:false,
+
+
+  });
+});
+
+    </script>
+        <video id="video-background" autoplay muted loop>
+            <!-- Provide your video file here -->
+            <source src="./Assests/srm1.mp4" type="video/mp4">
+           
+        </video>
+        <div class="overlay-header"></div>
+        
+        
+    </header>
+
+    <!-- latest news section  -->
+    <script>
+      $(document).ready(function () {
+        $(".your-class").slick({
+          dots: true,
+          infinite: true,
+          slidesToShow: 3,
+          slidesToScroll: 3,
+        });
+      });
+    </script>
+    <div class="latest-news">
+      <h1 class="news-heading">Latest <span>NEWS</span></h1>
+      <div class="carousel-container2">
+        <div class="carousel" id="carousel1">
+          <div class="corousel-card">
+            <img src="./Assests/img1.jpg" alt="" srcset="" />
+            <div class="contentcard">
+              <button>CAMPUS NEWS</button>
+              <h3>11 Jan 2024</h3>
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum
+                ut dicta mollitia, laboriosam deleniti hic unde commodi ea eum
+                consectetur quidem voluptates illum beatae doloremque?
+              </p>
+            </div>
+          </div>
+          <div class="corousel-card">
+            <img src="./Assests/img2.jpg" alt="" srcset="" />
+            <div class="contentcard">
+              <button>CAMPUS NEWS</button>
+              <h3>11 Jan 2024</h3>
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum
+                ut dicta mollitia, laboriosam deleniti hic unde commodi ea eum
+                consectetur quidem voluptates illum beatae doloremque?
+              </p>
+            </div>
+          </div>
+          <div class="corousel-card">
+            <img src="./Assests/img3.jpg" alt="" srcset="" />
+            <div class="contentcard">
+              <button>CAMPUS NEWS</button>
+              <h3>11 Jan 2024</h3>
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum
+                ut dicta mollitia, laboriosam deleniti hic unde commodi ea eum
+                consectetur quidem voluptates illum beatae doloremque?
+              </p>
+            </div>
+          </div>
+          <div class="corousel-card">
+            <img src="./Assests/img1.jpg" alt="" srcset="" />
+            <div class="contentcard">
+              <button>CAMPUS NEWS</button>
+              <h3>11 Jan 2024</h3>
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum
+                ut dicta mollitia, laboriosam deleniti hic unde commodi ea eum
+                consectetur quidem voluptates illum beatae doloremque?
+              </p>
+            </div>
+          </div>
+          <div class="corousel-card">
+            <img src="./Assests/img2.jpg" alt="" srcset="" />
+            <div class="contentcard">
+              <button>CAMPUS NEWS</button>
+              <h3>11 Jan 2024</h3>
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum
+                ut dicta mollitia, laboriosam deleniti hic unde commodi ea eum
+                consectetur quidem voluptates illum beatae doloremque?
+              </p>
+            </div>
+          </div>
+          <div class="corousel-card">
+            <img src="./Assests/img3.jpg" alt="" srcset="" />
+            <div class="contentcard">
+              <button>CAMPUS NEWS</button>
+              <h3>11 Jan 2024</h3>
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum
+                ut dicta mollitia, laboriosam deleniti hic unde commodi ea eum
+                consectetur quidem voluptates illum beatae doloremque?
+              </p>
+            </div>
+          </div>
+          <div class="corousel-card">
+            <img src="./Assests/img1.jpg" alt="" srcset="" />
+            <div class="contentcard">
+              <button>CAMPUS NEWS</button>
+              <h3>11 Jan 2024</h3>
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum
+                ut dicta mollitia, laboriosam deleniti hic unde commodi ea eum
+                consectetur quidem voluptates illum beatae doloremque?
+              </p>
+            </div>
+          </div>
+          <div class="corousel-card">
+            <img src="./Assests/img2.jpg" alt="" srcset="" />
+            <div class="contentcard">
+              <button>CAMPUS NEWS</button>
+              <h3>11 Jan 2024</h3>
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum
+                ut dicta mollitia, laboriosam deleniti hic unde commodi ea eum
+                consectetur quidem voluptates illum beatae doloremque?
+              </p>
+            </div>
+          </div>
+          <div class="corousel-card">
+            <img src="./Assests/img3.jpg" alt="" srcset="" />
+            <div class="contentcard">
+              <button>CAMPUS NEWS</button>
+              <h3>11 Jan 2024</h3>
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum
+                ut dicta mollitia, laboriosam deleniti hic unde commodi ea eum
+                consectetur quidem voluptates illum beatae doloremque?
+              </p>
+            </div>
+          </div>
+          <div class="corousel-card">
+            <img src="./Assests/img3.jpg" alt="" srcset="" />
+            <div class="contentcard">
+              <button>CAMPUS NEWS</button>
+              <h3>11 Jan 2024</h3>
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum
+                ut dicta mollitia, laboriosam deleniti hic unde commodi ea eum
+                consectetur quidem voluptates illum beatae doloremque?
+              </p>
+            </div>
+          </div>
+          <!-- Add more content items as needed -->
+        </div>
+        <div class="carousel-card2" id="carousel2">
+            <div class="corousel-card-inner">
+                <div class="news-update">
+                    <h1>NEWS UPDATE</h1>
+                </div>
+                  <h3>11 Jan 2024</h3>
+                  <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum
+                    ut dicta mollitia, laboriosam deleniti hic unde commodi ea eum
+                    consectetur quidem voluptates illum beatae doloremque?
+                  </p>
+                </div>
+                <div class="corousel-card-inner">
+                    <div class="news-update">
+                        <h1>NEWS UPDATE</h1>
+                    </div>
+                      <h3>11 Jan 2024</h3>
+                      <p>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum
+                        ut dicta mollitia, laboriosam deleniti hic unde commodi ea eum
+                        consectetur quidem voluptates illum beatae doloremque?
+                      </p>
+                    </div>
+                    <div class="corousel-card-inner">
+                        <div class="news-update">
+                            <h1>NEWS UPDATE</h1>
+                        </div>
+                          <h3>11 Jan 2024</h3>
+                          <p>
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum
+                            ut dicta mollitia, laboriosam deleniti hic unde commodi ea eum
+                            consectetur quidem voluptates illum beatae doloremque?
+                          </p>
+                        </div>
+                        </div>
+    </div>
+                
+          <!-- Add more content items as needed -->
+     
+      <script>
+        $(document).ready(function () {
+          // Initialize first carousel
+          $("#carousel1").slick({
+            vertical: true,
+            slidesToShow: 1,
+            slidesToScroll: 1,
+            Autoplay:2500,
+            arrows: false,
+            dots: true,
+            infinite: false,
+            asNavFor: "#carousel2",
+          });
+
+          // Initialize second carousel
+          $("#carousel2").slick({
+            vertical: true,
+            slidesToShow: 1,
+            slidesToScroll: 1,
+            autoplay:true,
+            autoplaySpeed:2000,
+            arrows: false,
+            dots: false,
+            infinite: false,
+            asNavFor: "#carousel1",
+          });
+        });
+      </script>
+    </div>
+    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js"
+      integrity="sha512-HGOnQO9+SP1V92SrtZfjqxxtLmVzqZpjFFekvzZVWoiASSQgSr4cw9Kqd2+l8Llp4Gm0G8GIFJ4ddwZilcdb8A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <!-- card section -->
+    <div class="card_container">
+        <h1 class="section-heading" >Courses We Offer</h1>
+      <!-- First Row -->
+      <div class="rows">
+        
+        <div class="card">
+          <img src="./Assests/18th-Convocation-srmist-5.jpg" alt="Image 1" />
+          <div class="icon-text">
+            <i class="fa-solid fa-pencil fa-2x"></i>
+            <p>Enginnering & <br> Technology</p>
+          </div>
+        </div>
+        <div class="card">
+          <img src="./Assests/18th-Convocation-srmist-5.jpg" alt="Image 2" />
+          <div class="icon-text">
+            <i class="fa-solid fa-pencil fa-2x"></i>
+            <p>Enginnering & <br> Technology</p>
+          </div>
+        </div>
+        <div class="card">
+          <img src="./Assests/18th-Convocation-srmist-5.jpg" alt="Image 3" />
+          <div class="icon-text">
+            <i class="fa-solid fa-pencil fa-2x"></i>
+            <p>Enginnering & <br> Technology</p>
+          </div>
+        </div>
+        <div class="card">
+          <img src="./Assests/18th-Convocation-srmist-5.jpg" alt="Image 3" />
+          <div class="icon-text">
+            <i class="fa-solid fa-pencil fa-2x"></i>
+            <p>Enginnering & <br> Technology</p>
+          </div>
+        </div>
+        <div class="card">
+          <img src="./Assests/18th-Convocation-srmist-5.jpg" alt="Image 3" />
+          <div class="icon-text">
+            <i class="fa-solid fa-pencil fa-2x"></i>
+            <p>Enginnering & <br> Technology</p>
+          </div>
+        </div>
+        <div class="card">
+          <img src="./Assests/18th-Convocation-srmist-5.jpg" alt="Image 3" />
+          <div class="icon-text">
+            <i class="fa-solid fa-pencil fa-2x"></i>
+            <p>Enginnering & <br> Technology</p>
+          </div>
+        </div>
+        <div class="card">
+          <img src="./Assests/18th-Convocation-srmist-5.jpg" alt="Image 3" />
+          <div class="icon-text">
+            <i class="fa-solid fa-pencil fa-2x"></i>
+            <p>Enginnering & <br> Technology</p>
+          </div>
+        </div>
+        <div class="card">
+          <img src="./Assests/18th-Convocation-srmist-5.jpg" alt="Image 3" />
+          <div class="icon-text">
+            <i class="fa-solid fa-pencil fa-2x"></i>
+            <p>Enginnering & <br> Technology</p>
+          </div>
+        </div>
+        <div class="card">
+          <img src="./Assests/18th-Convocation-srmist-5.jpg" alt="Image 3" />
+          <div class="icon-text">
+            <i class="fa-solid fa-pencil fa-2x"></i>
+            <p>Enginnering & <br> Technology</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- faculty section -->
+    <div class="faculty-section">
+      <h1 class="section-heading">Our Distinguished Faculty</h1>
+      <p class="section-paragraph">
+        Our teachers are the source of our Academic Excellence and we at Graphic
+        Era (Deemed to be University) ensure the delivery of higher education of
+        the highest order from some of the best faculty in the world. The
+        university boasts a large number of faculty who are educated from the
+        Premier Institutions of India and abroad, including IITs, NITs, IISc
+        Bangalore, IIMs, and more
+      </p>
+      <p class="view">View More</p>
+      <p class="line"></p>
+      <div class="card-section">
+        <div class="card-item">
+          <div class="upper_card">
+            <div class="image-wrapper">
+              <img src="./Assests/Screenshot (3).png" alt="Image 1" />
+            </div>
+          </div>
+
+          <h1>President</h1>
+          <p>Prof. (Dr.) Kamal Ghanshala</p>
+        </div>
+        <div class="card-item">
+            <div class="upper_card">
+              <div class="image-wrapper">
+                <img src="./Assests/Screenshot (3).png" alt="Image 1" />
+              </div>
+            </div>
+  
+            <h1>President</h1>
+            <p>Prof. (Dr.) Kamal Ghanshala</p>
+          </div>
+          <div class="card-item">
+            <div class="upper_card">
+              <div class="image-wrapper">
+                <img src="./Assests/Screenshot (3).png" alt="Image 1" />
+              </div>
+            </div>
+  
+            <h1>President</h1>
+            <p>Prof. (Dr.) Kamal Ghanshala</p>
+          </div>
+          <div class="card-item">
+            <div class="upper_card">
+              <div class="image-wrapper">
+                <img src="./Assests/Screenshot (3).png" alt="Image 1" />
+              </div>
+            </div>
+  
+            <h1>President</h1>
+            <p>Prof. (Dr.) Kamal Ghanshala</p>
+          </div>
+        
+      </div>
+    </div>
+
+    <!-- placement Section -->
+    <div class="placement-container">
+      <div class="ineer-placment">
+        <h1>Placements 2023</h1>
+        <p>
+          Graphic Era (Deemed to be University) has continuously established new
+          standards for placements with leading global MNCs, and the year 2023
+          has been no exception. Our students have excelled in rigorous
+          selection processes and secured positions in their dream companies
+          with some of the highest packages in the country. The key to this
+          remarkable success lies in the supportive ecosystem provided to the
+          students during their time at the university. Their dedication, along
+          with specialized placement training and preparation right from the
+          beginning, has been instrumental in achieving such stupendous results
+          over the years.
+        </p>
+        <div class="placments-cards">
+          <div class="placcard">
+            <div
+              id="carouselExampleSlidesOnly"
+              class="carousel slide"
+              data-ride="carousel"
+            >
+              <div class="carousel-inner">
+                <div class="carousel-item active" data-interval="2500">
+                  <img
+                    src="./Assests//img1.jpg"
+                    class="d-block w-100"
+                    alt="..."
+                  />
+                </div>
+                <div class="carousel-item" data-interval="2500">
+                  <img
+                    src="./Assests//img2.jpg"
+                    class="d-block w-100"
+                    alt="..."
+                  />
+                </div>
+                <div class="carousel-item" data-interval="2500">
+                  <img
+                    src="./Assests//img3.jpg"
+                    class="d-block w-100"
+                    alt="..."
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="placcard">
+            <div
+              id="carouselExampleSlidesOnly"
+              class="carousel slide"
+              data-ride="carousel"
+            >
+              <div class="carousel-inner">
+                <div class="carousel-item active" data-interval="2500">
+                  <img
+                    src="./Assests//img1.jpg"
+                    class="d-block w-100"
+                    alt="..."
+                  />
+                </div>
+                <div class="carousel-item" data-interval="2500">
+                  <img
+                    src="./Assests//img2.jpg"
+                    class="d-block w-100"
+                    alt="..."
+                  />
+                </div>
+                <div class="carousel-item" data-interval="2500">
+                  <img
+                    src="./Assests//img3.jpg"
+                    class="d-block w-100"
+                    alt="..."
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="placcard">
+            <div
+              id="carouselExampleSlidesOnly"
+              class="carousel slide"
+              data-ride="carousel"
+            >
+              <div class="carousel-inner">
+                <div class="carousel-item active" data-interval="2500">
+                  <img
+                    src="./Assests//img1.jpg"
+                    class="d-block w-100"
+                    alt="..."
+                  />
+                </div>
+                <div class="carousel-item" data-interval="2500">
+                  <img
+                    src="./Assests//img2.jpg"
+                    class="d-block w-100"
+                    alt="..."
+                  />
+                </div>
+                <div class="carousel-item" data-interval="2500">
+                  <img
+                    src="./Assests//img3.jpg"
+                    class="d-block w-100"
+                    alt="..."
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="placcard">
+            <div
+              id="carouselExampleSlidesOnly"
+              class="carousel slide"
+              data-ride="carousel"
+            >
+              <div class="carousel-inner">
+                <div class="carousel-item active" data-interval="2500">
+                  <img
+                    src="./Assests//img1.jpg"
+                    class="d-block w-100"
+                    alt="..."
+                  />
+                </div>
+                <div class="carousel-item" data-interval="2500">
+                  <img
+                    src="./Assests//img2.jpg"
+                    class="d-block w-100"
+                    alt="..."
+                  />
+                </div>
+                <div class="carousel-item" data-interval="2500">
+                  <img
+                    src="./Assests//img3.jpg"
+                    class="d-block w-100"
+                    alt="..."
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="placcard">
+            <div
+              id="carouselExampleSlidesOnly"
+              class="carousel slide"
+              data-ride="carousel"
+            >
+              <div class="carousel-inner">
+                <div class="carousel-item active" data-interval="2500">
+                  <img
+                    src="./Assests//img1.jpg"
+                    class="d-block w-100"
+                    alt="..."
+                  />
+                </div>
+                <div class="carousel-item" data-interval="2500">
+                  <img
+                    src="./Assests//img2.jpg"
+                    class="d-block w-100"
+                    alt="..."
+                  />
+                </div>
+                <div class="carousel-item" data-interval="2500">
+                  <img
+                    src="./Assests//img3.jpg"
+                    class="d-block w-100"
+                    alt="..."
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="placcard">
+            <div
+              id="carouselExampleSlidesOnly"
+              class="carousel slide"
+              data-ride="carousel"
+            >
+              <div class="carousel-inner">
+                <div class="carousel-item active" data-interval="2500">
+                  <img
+                    src="./Assests//img1.jpg"
+                    class="d-block w-100"
+                    alt="..."
+                  />
+                </div>
+                <div class="carousel-item" data-interval="2500">
+                  <img
+                    src="./Assests//img2.jpg"
+                    class="d-block w-100"
+                    alt="..."
+                  />
+                </div>
+                <div class="carousel-item" data-interval="2500">
+                  <img
+                    src="./Assests//img3.jpg"
+                    class="d-block w-100"
+                    alt="..."
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- photos section -->
+    <div class="photo-sec">
+        <h1>Engage With The Vibrant And Happening
+        </h1>
+        <div class="blueline"></div>
+        <div class="photo-card-container">
+            <div class="pcard">
+                <div class="pcard1-one">
+                    <img src="./Assests/bg.avif" alt="">
+                    <div class="bluelayer1"></div>
+                    <h1>hello</h1>
+                    
+                </div>
+                <div class="pcard1-two">
+                    <div class="pcard1-two-1">
+                        <img src="./Assests//img2.jpg" alt="">
+                        <div class="bluelayer"></div>
+                        <h1>hello</h1>
+                    </div>
+                    <div class="pcard1-two-1">
+                        <img src="./Assests/img3.jpg" alt="">
+                        <div class="bluelayer"></div>
+                        <h1>hello</h1>
+                    </div>
+                    
+                </div>
+
+
+            </div>
+           
+                
+<div class="pcard2">
+    <img src="./Assests/img3.jpg" alt="">
+    <div class="blacklayer"></div>
+</div>
+
+
+            </div>
+            <div class="blue-btn">
+                <button onclick="showAnotherPopUp()"> View All Events</button>
+            </div>
+        </div>
+        
+    </div>
+    
+   <!-- footer       -->
+   <footer class="footer">
+    <div class="footer-columns">
+      <div class="footer-column">
+        <div>
+        <h4>Admissions</h4>
+        <div class="divider"></div>
+        <div class="ulelements">
+        <ul>
+          
+          <li><a href="#">B.Tech.</a></li>
+          <li><a href="#">B.Des.</a></li>
+          <li><a href="#">B.Pharm.</a></li>
+          <li><a href="#">BBA</a></li>
+          <li><a href="#">BCA</a></li>
+          <li><a href="#">B.Sc.</a></li>
+          <li><a href="#">B.Com.</a></li>
+          <li><a href="#">BA</a></li>
+       
+        </ul>
+        <ul class="ul-second">
+          
+            <li><a href="#">B.Tech.</a></li>
+            <li><a href="#">B.Des.</a></li>
+            <li><a href="#">B.Pharm.</a></li>
+            <li><a href="#">BBA</a></li>
+            <li><a href="#">BCA</a></li>
+            <li><a href="#">B.Sc.</a></li>
+            <li><a href="#">B.Com.</a></li>
+            <li><a href="#">BA</a></li>
+         
+          </ul>
+        </div>
+       
+    </div>
+ 
+      </div>
+      <div class="footer-column">
+        <h4>Aspiring Students</h4>
+        <div class="divider"></div>
+        <ul>
+          <li><a href="#">Admission Alerts</a></li>
+          <li><a href="#">FAQs</a></li>
+          <li><a href="#">International Admissions</a></li>
+          <li><a href="#">Important Dates</a></li>
+          <li><a href="#">Media</a></li>
+          <li><a href="#">Programs</a></li>
+          <li><a href="#">UPES Online</a></li>
+          <!-- more links -->
+        </ul>
+      </div>
+      <div class="footer-column">
+        <h4>Other links</h4>
+        <div class="divider"></div>
+        <div class="ulelements">
+        
+        <ul>
+          <li><a href="#">Campus</a></li>
+          <li><a href="#">Events</a></li>
+          <li><a href="#">Code of Conduct</a></li>
+          <li><a href="#">Contact Us</a></li>
+          <li><a href="#">Current Openings</a></li>
+          <li><a href="#">Downloads</a></li>
+          <!-- more links -->
+        </ul>
+        <ul class="ul-second">
+          
+            <li><a href="#">B.Tech.</a></li>
+            <li><a href="#">B.Des.</a></li>
+            <li><a href="#">B.Pharm.</a></li>
+            <li><a href="#">BBA</a></li>
+            <li><a href="#">BCA</a></li>
+            
+         
+          </ul>
+          <ul class="ul-second">
+          
+            <li><a href="#">B.Tech.</a></li>
+            <li><a href="#">B.Des.</a></li>
+            <li><a href="#">B.Pharm.</a></li>
+            <li><a href="#">BBA</a></li>
+            <li><a href="#">BCA</a></li>
+           
+         
+          </ul>
+        </div>
+      </div>
+      
+    </div>
+    
+    <div class="footer-info">
+        <div class="footer-column">
+      <div class="campus-address">
+        <h4>Kandoli Campus, Dehradun</h4>
+        <p>P.O. Kandoli Via Premnagar, Dehradun-248007</p>
+      </div>
+      </div>
+      <div class="footer-column">
+      <div class="campus-address">
+        <h4>Bidholi Campus, Dehradun</h4>
+        <p>P.O. Bidholi Via Premnagar, Dehradun-248007</p>
+      </div>
+      </div>
+      <div class="footer-column">
+      <div class="corporate-office">
+        <h4>Corporate Office</h4>
+        <p>UPES, Upper Ground & First Floor, Greater Kailash-II, New Delhi-110048</p>
+      </div>
+      </div>
+      <div class="footer-column">
+        <h4>Contact Us</h4>
+        <ul>
+          <li>Toll Free: 18001028737</li>
+          <li>Email: enrollments@upes.ac.in</li>
+          <li>For International Queries : international.admissions@upes.ac.in</li>
+          <!-- more links -->
+        </ul>
+      </div>
+
+  
+    </div>
+    <div class="footer-social">
+        <div class="footer-column">
+       
+          <ul class="social-icons">
+            <div class="rounded-social-buttons">
+                <a class="social-button facebook" href="https://www.facebook.com/" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                <a class="social-button twitter" href="https://www.twitter.com/" target="_blank"><i class="fab fa-twitter"></i></a>
+                <a class="social-button linkedin" href="https://www.linkedin.com/" target="_blank"><i class="fab fa-linkedin"></i></a>
+                <a class="social-button tiktok" href="https://www.tiktok.com/" target="_blank"><i class="fab fa-tiktok"></i></a>
+                <a class="social-button youtube" href="https://www.youtube.com/" target="_blank"><i class="fab fa-youtube"></i></a>
+                <a class="social-button instagram" href="https://www.instagram.com/" target="_blank"><i class="fab fa-instagram"></i></a>
+            </div>
+          </ul>
+        </div>
+        <div class="footer-column">
+          <p>Copyright © 2024 UPES. All Rights Reserved.</p>
+        </div>
+        <div>
+            Sitemap
+        </div>
+      </div>
+  </footer>
+   
+  </body>
+</html>
