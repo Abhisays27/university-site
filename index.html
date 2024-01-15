@@ -67,8 +67,10 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
     <script src="./script.js"></script>
   </head>
+  <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
   <script
     type="text/javascript"
     src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"
@@ -77,53 +79,49 @@
      <!-- header -->
      <header>
         <div class="navbar-header">
-        <img src="./Assests/srm-logo-white.svg (1).svg" alt="Logo" class="logo"> <!-- Replace with your logo image -->
+        <img src="./Assests/srm-logo-white.svg (1).svg" alt="Logo" class="logo" id="header-logo"> <!-- Replace with your logo image -->
         <nav >
-            <a href="#" class="nav-link1">Academics <i class="fa-solid fa-chevron-down"></i></a>
-            <a href="#" class="nav-link1">Research<i class="fa-solid fa-chevron-down"></i></a>
-            <a href="#" class="nav-link1">Campus Life<i class="fa-solid fa-chevron-down"></i></a>
-            <a href="#" class="nav-link1">International<i class="fa-solid fa-chevron-down"></i></a>
-            <a href="#" class="nav-link1">About<i class="fa-solid fa-chevron-down"></i></a>
+            <a href="#" class="nav-link" data-target="academics" >Academics <i class="fa-solid fa-chevron-down"></i></a>
+            <a href="#"  class="nav-link">Research<i class="fa-solid fa-chevron-down"></i></a>
+            <a href="#"  class="nav-link">Campus Life<i class="fa-solid fa-chevron-down"></i></a>
+            <a href="#"  class="nav-link">International<i class="fa-solid fa-chevron-down"></i></a>
+            <a href="#"  class="nav-link">About<i class="fa-solid fa-chevron-down"></i></a>
         </nav>
     </div>
-    
-    
-    <div class="modal-overlay" id="academics-modal">
-        <!-- Modal content for Academics -->
-        <div class="modal-content">
-            <h2>Academics Modal</h2>
-            <!-- Add your modal content here -->
-            <p>This is the content of the Academics modal.</p>
-        </div>
+ 
+
+    <div id="modalAcademics" class="modal">
+        
+            <p>This is the Academics modal content</p>
+        
     </div>
-    <script>
-      document.addEventListener("DOMContentLoaded", function () {
-    const navLinks = document.querySelectorAll('.nav-link');
+    
+    <!-- Modal for Research -->
+    <div id="modalResearch" class="modal">
+    
+            <p>This is the Research modal content</p>
+   
+    </div>
 
-    navLinks.forEach(link => {
-        const modalId = link.getAttribute('data-modal');
-        const modal = document.getElementById(modalId);
+    <div id="modalCampus" class="modal">
+       
+            <p>This is the Campus Life modal content</p>
+      
+    </div>
+    <!-- Modal for International -->
+<div id="modalInternational" class="modal">
+   
+        <p>This is the International modal content</p>
+  
+</div>
 
-        link.addEventListener('mouseenter', function() {
-            modal.style.display = 'block';
-        });
-
-        link.addEventListener('mouseleave', function() {
-            modal.style.display = 'none';
-        });
-
-        modal.addEventListener('mouseenter', function() {
-            modal.style.display = 'block';
-        });
-
-        modal.addEventListener('mouseleave', function() {
-            modal.style.display = 'none';
-        });
-    });
-});
-
-
-    </script>
+<!-- Modal for About -->
+<div id="modalAbout" class="modal">
+   
+        <p>This is the About modal content</p>
+  
+</div>
+    
     <div class="crousel-header-part">
     <div class="crousel-header">
         <div class="content-1">
