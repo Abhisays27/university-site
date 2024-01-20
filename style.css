@@ -5,6 +5,8 @@ body{
     text-decoration: none;
     overflow-y: auto !important;
 }
+
+
 /* cards section */
 .card_container {
     padding-top: 4%;
@@ -72,13 +74,13 @@ body{
     transform: scale(1.1);
   }
 
-  /* Additional rules for changing icon and text color on hover */
+
   .card:hover .icon-text i {
-    color: #ffffff; /* Change icon color on hover */
+    color: #ffffff; 
   }
 
   .card:hover .icon-text p {
-    color: #ffffff; /* Change text color on hover */
+    color: #ffffff; 
   }
   @media only screen and (max-width: 1000px) {
     .card-section {
@@ -188,8 +190,8 @@ body{
   }
   .line {
     border-top: 1px solid rgb(23, 22, 22);
-    width: 90px; /* Adjust the width of the line */
-    margin: auto; /* Adjust the margin as needed */
+    width: 90px; 
+    margin: auto; 
     margin-top: -12px;
   }
 
@@ -503,6 +505,10 @@ display: none;
     
     
     }
+
+
+
+
 
 /* latest news css */
 .latest-news{
@@ -969,6 +975,10 @@ textarea {
 }
 
 
+
+
+
+
 /* photos section */
 .photo-sec{
     background-color: #f6f6f6f5;
@@ -1046,7 +1056,7 @@ textarea {
   cursor: pointer;
     box-sizing: border-box;
     overflow: hidden;
-    position: relative; /* Ensure that content inside .pcard1-two-1 is not overflowing */
+    position: relative; 
 }
 
 .pcard2 {
@@ -1056,7 +1066,7 @@ textarea {
     margin-left: 20px;
     box-sizing: border-box;
     overflow: hidden; 
-    /* Ensure that content inside .pcard2 is not overflowing */
+    
 }
 
 
@@ -1262,6 +1272,12 @@ textarea {
 
 
 }
+
+
+
+
+
+
 
 /*header */
 /* Mobile menu styles */
