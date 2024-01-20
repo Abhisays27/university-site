@@ -72,7 +72,7 @@ document.addEventListener("DOMContentLoaded", function () {
 //sliding window
 $(document).ready(function () {
     $(".hamburger-icon").click(function () {
-        $(".sliding-window").slideDown();
+        $(".sliding-window").animate({ width: 'toggle', left: '0' }, 500);
     });
 
     $("#close-btn").click(function () {
@@ -81,7 +81,7 @@ $(document).ready(function () {
 });
 
 function closeSlidingWindow() {
-    $(".sliding-window").slideUp();
+    $(".sliding-window").animate({ width: 'toggle', left: '-100%' }, 500);
 }
 
 
