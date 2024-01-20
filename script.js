@@ -48,16 +48,54 @@ document.addEventListener('DOMContentLoaded', function () {
 document.addEventListener("DOMContentLoaded", function () {
     var navbar = document.querySelector('.navbar-header');
     var logo = document.getElementById('header-logo');
+    var logomoob = document.getElementById('header-logo-mob');
+    var hamburgerIcon = document.querySelector('.hamburger-icon i');
+    
     var stickyOffset = navbar.offsetTop;
 
     window.addEventListener('scroll', function () {
         if (window.scrollY > stickyOffset) {
             navbar.classList.add('sticky');
-            logo.src = "./Assests/srm-logo.svg.svg";
+            logo.src = "./Assests/aditya.png";
+            logomoob.src = "./Assests/aditya.png";
+       
+            hamburgerIcon.style.color = 'black'; 
         } else {
             navbar.classList.remove('sticky');
-            logo.src = "./Assests/srm-logo-white.svg (1).svg";
+            logo.src = "./Assests/aditya.png";
+            logomoob.src = "./Assests/aditya.png";
+            hamburgerIcon.style.color = 'white'; 
         }
     });
 });
 
+//sliding window
+$(document).ready(function () {
+    $(".hamburger-icon").click(function () {
+        $(".sliding-window").slideDown();
+    });
+
+    $("#close-btn").click(function () {
+        closeSlidingWindow();
+    });
+});
+
+function closeSlidingWindow() {
+    $(".sliding-window").slideUp();
+}
+
+
+
+  // JavaScript to close the dropdown on click
+  $(document).ready(function() {
+    $('.nav-link-slide').on('click', function() {
+      var targetId = $(this).data('target');
+      
+      // Toggle the content of the clicked accordion
+      $('#' + targetId).slideToggle();
+      
+      // Close other accordions
+      $('.accordion-content').not('#' + targetId).slideUp();
+    });
+  });
+  
