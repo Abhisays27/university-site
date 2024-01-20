@@ -149,3 +149,146 @@ li.slick-active button::before {
 
 
 }
+@media only screen and (max-width: 638px)
+{
+
+  .card-item {
+    width: 230px;
+    height: 250px; /* Set the width of each card */
+    margin: 5px !important; /* Adjust the space between cards */
+  }
+
+
+  
+.card-item h1 {
+
+  font-size: 13px;
+ 
+}
+
+.card-item p {
+ 
+  font-size: 10px;
+
+}
+.card-item .image-wrapper:before {
+display: none;
+}
+.card-section {
+ 
+  display: flex;
+
+  justify-content: space-between; /* Adjust the space between cards */
+  margin:10px !important;
+}
+
+  
+}
+@media only screen and (max-width: 500px)
+{
+
+  .card-item {
+    width: 205px;
+    height: 225px; /* Set the width of each card */
+    margin: 5px !important; /* Adjust the space between cards */
+  }
+
+
+  
+.card-item h1 {
+
+  font-size: 13px;
+ 
+}
+
+.card-item p {
+ 
+  font-size: 10px;
+
+}
+.card-item .image-wrapper:before {
+display: none;
+}
+.card-section {
+ 
+  display: flex;
+
+  justify-content: space-between; /* Adjust the space between cards */
+  margin-right: 0 !important;
+}
+
+  
+}
+
+@media only screen and (max-width: 465px)
+{
+
+  .card-item {
+    width: 185px;
+    height: 210px; /* Set the width of each card */
+    margin: 5px !important; /* Adjust the space between cards */
+  }
+
+
+  
+.card-item h1 {
+
+  font-size: 13px;
+ 
+}
+
+.card-item p {
+ 
+  font-size: 10px;
+
+}
+.card-item .image-wrapper:before {
+display: none;
+}
+.card-section {
+ 
+  display: flex;
+
+  justify-content: space-between; /* Adjust the space between cards */
+  margin-right: 0 !important;
+}
+
+  
+}
+
+
+@media only screen and (max-width: 397px)
+{
+
+  .card-item {
+    width: 160px;
+    height: 190px; /* Set the width of each card */
+    margin: 5px !important; /* Adjust the space between cards */
+  }
+
+
+  
+.card-item h1 {
+
+  font-size: 12px;
+ 
+}
+
+.card-item p {
+ 
+  font-size: 9px;
+
+}
+.card-item .image-wrapper:before {
+display: none;
+}
+.card-section {
+ 
+  display: flex;
+
+  justify-content: space-between; /* Adjust the space between cards */
+  margin-right: 0 !important;
+}
+
+  
+}
